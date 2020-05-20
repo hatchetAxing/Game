@@ -1,0 +1,23 @@
+
+import java.awt.image.BufferedImage;
+
+
+public class Textures {
+
+    public BufferedImage player, missile, enemy;
+
+    private SpriteSheet ss;
+
+    public Textures(Game game) {
+         ss = new SpriteSheet(game.getSpriteSheet());
+
+         getTextures();
+    }
+
+
+    private void getTextures(){
+        player = ss.grabImage(1, 1, 63, 63);
+        missile = ss.grabImage(2, 1, 63, 63);
+        enemy = ss.grabImage(3, 1, 63, 63);
+    }
+}
